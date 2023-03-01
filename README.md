@@ -1,31 +1,32 @@
-# 🐦 Clone Twitter
+# 🍹 Menu Mate
 
-Este é um projeto de clone do Twitter criado usando o framework Django, o Python e o banco de dados MySQL. Ele é projetado para ser um aplicativo web completo, com funcionalidades semelhantes às do Twitter, incluindo autenticação de usuário, publicação de tweets.
+O software de bares criado com Django e Python é uma solução moderna e eficiente para gerenciar bares e restaurantes. Com o poder do Django e o banco de dados Postgres, este software oferece uma plataforma robusta e escalável para gerenciar todas as operações de um bar.
 
-## 📍 Reference
+O software permite a criação e gestão de cardápios, com a possibilidade de personalizar preços, itens e descrições. Além disso, a gestão de estoque também é uma funcionalidade do sistema, permitindo que os proprietários possam controlar o que é vendido e reposto, além de gerenciar fornecedores e preços de compra.
 
-- [Prof André's Front-End Crud Project](https://github.com/AndreZuplae/Front-end)
-- [Prof. André's Base Django Project](https://github.com/AndreZuplae/BaseDjangoMoredevs)
+O software também inclui um sistema de gestão de pedidos e mesas, permitindo que os clientes façam pedidos através de dispositivos móveis, como smartphones e tablets, e monitorem o status de seus pedidos em tempo real. Os proprietários também podem visualizar relatórios de vendas, controlar o fluxo de caixa e gerenciar funcionários e seus horários.
 
 ## ✒️ Authors
 
 - [@Dieter](https://github.com/Weboss-br)
-- [@Haiko](https://github.com/Haipo31)
-- [@Guilherme](https://github.com/guiwamser)
+- [@João](https://github.com/JoaoVictorOlve)
+- [@Marcos](https://github.com/MQSilveira)
 - [@Nicolas](https://github.com/LiraNick)
+- [@David](https://github.com/davidsimas)
+
 
 ## 📄 Requisitos
 
 - Python 3.x
 - Django 3.x
-- MySQL
+- Postgres
 
 ## 🛠️ Instalação
 
 - Clone este repositório em sua máquina local.
 - Copy code
 ```bash
-$ git clone https://github.com/seu_usuario/seu_repositorio.git
+$ git clone https://github.com/LiraNick/menu_mate.git
 ```
 - Crie um virtualenv e ative-o.
 - Instale as dependências listadas no arquivo requirements.txt usando o comando:
@@ -33,7 +34,7 @@ $ git clone https://github.com/seu_usuario/seu_repositorio.git
 ```bash
 $ pip install -r requirements.txt
 ```
-- Configure as credenciais do banco de dados MySQL no arquivo settings.py do seu projeto.
+- Configure as credenciais do banco de dados Postgres no arquivo settings.py do seu projeto.
 Execute as migrações usando os comandos:
 - Copy code
 ```bash
@@ -47,14 +48,14 @@ $ python manage.py runserver
 ```
 ## 🛠️ Funcionalidades
 
-Autenticação de usuário (cadastro, login, feed)
-Publicação de tweets.
-Painel administrativo com recursos para gerenciar usuários e tweets.
-O projeto utiliza bootstrap para o design responsivo.
+O software possui as seguintes funcionalidades:
 
-O projeto contém validações de formulário para garantir a integridade dos dados.
-Utilizado o recurso de notificações para alertar os usuários sobre interações com seus tweets e seguidores.
-As senhas dos usuários são armazenadas de forma segura.
+Gerenciamento de estoque de bebidas e alimentos;
+Controle de caixa;
+Criação de pedidos e registro de vendas;
+Cadastro de funcionários e seus respectivos horários de trabalho;
+Monitoramento das mesas e pedidos em andamento;
+Geração de relatórios de vendas e estoque.
 
 ## 👨‍💻 Como contribuir
 
@@ -70,17 +71,17 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para ma
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-Comentários finais
-Este projeto foi desenvolvido com o objetivo de fornecer uma base sólida para quem deseja desenvolver sua própria aplicação de rede social. Ele pode ser usado como base para desenvolvimento de projetos pessoais ou comerciais. Sinta-se livre para fazer modificações e adaptações de acordo com suas necessidades.
 
-## 🛠️ Built With
+## 🛠️ Construído Com
 
-Tools Used
+Ferramentas Usadas
 
-* [Jira](https://tojnpc.atlassian.net/jira) - organização do projeto
-* [VScode](https://code.visualstudio.com/) - development IDE
-* [Python](https://www.python.org/downloads/release/python-3111/) - Linguagem de programação
-* [Docker](https://www.docker.com/products/docker-desktop/) - plataforma de código aberto
-* [Django](https://www.djangoproject.com) - framework  
-* [Psycopg2](https://pypi.org/project/psycopg2/) - é uma interface disponível em Python para o sistema de gerenciamento de banco de dados Postgres
-* [Html](https://pt.wikipedia.org/wiki/HTML5) - Linguagem de marcação de hipertexto
+* [Jira](https://tojnpc.atlassian.net/jira) - Plataforma de gerenciamento de projetos e rastreamento de problemas que ajuda equipes a planejar, acompanhar e lançar software.
+* [VScode](https://code.visualstudio.com/) - Editor de código gratuito e multiplataforma que suporta várias linguagens de programação e oferece recursos avançados como depuração, controle de versão integrado e extensibilidade por meio de plug-ins.
+* [Python](https://www.python.org/downloads/release/python-3111/) - Linguagem de programação popular conhecida por sua simplicidade, legibilidade e versatilidade.
+* [Docker](https://www.docker.com/products/docker-desktop/) - Plataforma de contêineres que permite aos desenvolvedores empacotar aplicativos em um ambiente isolado, facilitando a implantação e o gerenciamento de aplicativos em diferentes ambientes.
+* [Django](https://www.djangoproject.com) - Framework web de alto nível escrito em Python que permite o desenvolvimento rápido e seguro de aplicativos complexos.
+* [Figma](https://www.figma.com/) - Ferramenta de design de interface do usuário baseada na nuvem que permite criar, colaborar e compartilhar designs de alta qualidade.
+* [Html](https://pt.wikipedia.org/wiki/HTML5) - Linguagem de marcação usada para estruturar e exibir conteúdo na web.
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Linguagem de estilo usada para definir o layout e a aparência de páginas da web.
+* [JavaScript]( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Linguagem de programação usada para criar interatividade e dinamismo em páginas da web.
