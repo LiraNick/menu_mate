@@ -1,4 +1,4 @@
-# 🍹 Menu Mate
+# 🍹 Menu Mate 🍹
 
 O software de bares criado com Django e Python é uma solução moderna e eficiente para gerenciar bares e restaurantes. Com o poder do Django e o banco de dados Postgres, este software oferece uma plataforma robusta e escalável para gerenciar todas as operações de um bar.
 
@@ -6,7 +6,7 @@ O software permite a criação e gestão de cardápios, com a possibilidade de p
 
 O software também inclui um sistema de gestão de pedidos e mesas, permitindo que os clientes façam pedidos através de dispositivos móveis, como smartphones e tablets, e monitorem o status de seus pedidos em tempo real. Os proprietários também podem visualizar relatórios de vendas, controlar o fluxo de caixa e gerenciar funcionários e seus horários.
 
-## ✒️ Authors
+## ✒️ Authors ✒️
 
 - [@Dieter](https://github.com/Weboss-br)
 - [@João](https://github.com/JoaoVictorOlve)
@@ -15,13 +15,13 @@ O software também inclui um sistema de gestão de pedidos e mesas, permitindo q
 - [@David](https://github.com/davidsimas)
 
 
-## 📄 Requisitos
+## 📄 Requisitos 📄
 
 - Python 3.x
 - Django 3.x
 - Postgres
 
-## 🛠️ Instalação
+## 🛠️ Instalação 🛠️
 
 - Clone este repositório em sua máquina local.
 - Copy code
@@ -46,7 +46,7 @@ $ python manage.py migrate
 ```bash
 $ python manage.py runserver
 ```
-## 🛠️ Funcionalidades
+## 🛠️ Funcionalidades 🛠️
 
 O software possui as seguintes funcionalidades:
 
@@ -57,7 +57,7 @@ Cadastro de funcionários e seus respectivos horários de trabalho;
 Monitoramento das mesas e pedidos em andamento;
 Geração de relatórios de vendas e estoque.
 
-## 👨‍💻 Como contribuir
+## 👨‍💻 Como contribuir 👨‍💻
 
 Este é um projeto aberto, e todos estão convidados a contribuir para o seu desenvolvimento. Se você deseja contribuir, por favor, siga as seguintes etapas:
 
@@ -65,14 +65,14 @@ Este é um projeto aberto, e todos estão convidados a contribuir para o seu des
 - Crie uma branch para a funcionalidade que você deseja adicionar.
 - Faça um pull request para o branch master.
 
-## 📄 Licença
+## 📄 Licença 📄
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-## 🛠️ Construído Com
+## 🛠️ Construído Com 🛠️
 
 Ferramentas Usadas
 
