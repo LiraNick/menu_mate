@@ -50,12 +50,12 @@ $ python manage.py runserver
 
 O software possui as seguintes funcionalidades:
 
-Gerenciamento de estoque de bebidas e alimentos;
-Controle de caixa;
-Criação de pedidos e registro de vendas;
-Cadastro de funcionários e seus respectivos horários de trabalho;
-Monitoramento das mesas e pedidos em andamento;
-Geração de relatórios de vendas e estoque.
+- Gerenciamento de estoque de bebidas e alimentos;
+- Controle de caixa;
+- Criação de pedidos e registro de vendas;
+- Cadastro de funcionários e seus respectivos horários de trabalho;
+- Monitoramento das mesas e pedidos em andamento;
+- Geração de relatórios de vendas e estoque.
 
 ## 👨‍💻 Como contribuir 👨‍💻
 
@@ -85,3 +85,17 @@ Ferramentas Usadas
 * [Html](https://pt.wikipedia.org/wiki/HTML5) - Linguagem de marcação usada para estruturar e exibir conteúdo na web.
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Linguagem de estilo usada para definir o layout e a aparência de páginas da web.
 * [JavaScript]( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Linguagem de programação usada para criar interatividade e dinamismo em páginas da web.
+
+<details>
+  <summary> Clique aqui para ver o código </summary>
+- 🎉 Agradecimentos 🎉
+
+🎉 Quero agradecer ao professor andré zuplaaeiii pela incrível jornada de aprendizado que tivemos juntos neste curso. Foi uma experiência enriquecedora que me permitiu aprimorar minhas habilidades em programação e desenvolvimento de software.🎉
+
+🚀 Também quero agradecer a turma do moredevs2blu pela parceria, amizade e troca de conhecimentos ao longo do curso. A colaboração e o trabalho em equipe foram fundamentais para o nosso sucesso e crescimento profissional.🚀
+
+🙌 Com a orientação do professor e o suporte da turma, conseguimos desenvolver este projeto.🙌
+  
+👏 Obrigado a todos pelo apoio e incentivo ao longo do curso. Vocês são incríveis! 🙌
+
+</details>
