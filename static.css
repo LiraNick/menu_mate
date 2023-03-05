@@ -16,25 +16,91 @@ main {
 }
 
 .description {
-    background-color:red;
-    height:10vh;
+    background-color:rgba(102,102,102);
+    height:8vh;
+    display:flex;
+}
+
+#description-title{
+    margin-left:3vw;
+    padding-left:1.5vw;
+    padding-right:1.5vw;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(255,255,255);
 }
 
 .main-page {
     width:100vw;
-    height:80vh;
+    height:82vh;
     display:flex;
     flex-direction:row;
 }
 
+.mesa{
+    display:inline-flex;
+    margin:1.5vw;
+    border-radius:50%;
+    background-color:#3E4532;
+    width:7vw;
+    height:14vh;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
 .tables {
-    background-color:green;
-    width:80vw;
+    background-color:rgba(255, 255, 255);
+    width:75vw;
+}
+
+.aside-table{
+    width:25vw;
+    margin-bottom:10vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:2vh;
+    border-bottom:0.5vh solid #3E4532;
 }
 
 .aside-page {
-    width:20vw;
-    background-color:blue;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:25vw;
+    background-color:rgba(238,238,238);
 }
 
+.aside-add{
+    display:flex;
+    flex-direction:column;
+}
+
+#attendant{
+    margin-right:1vw;
+}
+
+#attendant-select{
+    width:7vw;
+}
+
+
+.aside-atendente {
+    margin-top:3vh;
+    display:flex;
+    flex-direction:row;
+    margin-bottom:3vh;
+}
+
+.aside-pesquisar{
+    display:flex;
+    flex-direction:row;
+}
+
+.aside-quantidade{
+    display:flex;
+    flex-direction:row;
+}
 
