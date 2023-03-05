@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'estabelecimentos',
-    'cardapio',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,7 +81,7 @@ DATABASES = {
         'USER': 'menumate',
         'PASSWORD': '654321',
         'HOST': 'localhost',
-        'PORT': '5434',
+        'PORT': '5432',
     }
 }
 
