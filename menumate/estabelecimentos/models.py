@@ -6,9 +6,12 @@ class Estabelecimento(models.Model):
     telefone = models.CharField(max_length=20)
 
 class Mesa(models.Model):
-    status_mesa = models.BooleanField()
+    #status_mesa = models.BooleanField()
     numero = models.IntegerField()
     estabelecimento = models.ForeignKey(Estabelecimento, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f'Mesa {self.numero}'
 
 class Garcom(models.Model):
     nome = models.CharField(max_length=100)

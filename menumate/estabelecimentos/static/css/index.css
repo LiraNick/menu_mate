@@ -1,0 +1,104 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+.topo{
+    height: 110px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo {
+    background-color: #3E4532;
+    height: 110px;
+    width: 175px;
+    padding: 0px;
+}
+
+.menu {
+    align-items: center;
+    text-align: start;
+    color: #3E4532;
+    padding-top: 40px;
+    background-color: #3E4532;
+}
+
+.icone_menu {
+    height: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+.bt_login {
+    background-color: #3E4532;
+    text-align: end;
+    color: #3E4532;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.topo_conteudo {
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgba(255, 221, 148, 1);
+    width: 75px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    padding-left: 0px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.fundo_topo {
+    height: 50px;
+    background-color: #3E4532;
+}
+
+.conteudo {
+    background-color: rgba(255, 221, 148, 1);
+    text-align: start;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    height: 450px;
+}
+
+.mesa {
+    margin: 20px;
+    background-color: #3E4532;
+    color: #D2E7A9;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.info_mesa {
+    background-color: #D2E7A9;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    width: 70%;
+    height: 450px;
+    padding-top: 20px;
+}
+
+.info_mesa h4 {
+    text-align: center;
+}
+.info_mesa h6 {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+hr {
+	border: 0;
+	border-top: 3px solid  #3E4532;
+}
+
