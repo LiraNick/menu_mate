@@ -4,10 +4,10 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('home', views.index, name='home'),
-    path('configuracao', views.configuracoes, name='configuracao'),
-    path('contato', views.contato, name='contato')
+    path('', views.index, name = 'index'),
+    path('home', views.index, name = 'home'),
+    path('cardapio', views.cardapio, name = 'cardapio'),
+    path('contato', views.contato, name = 'contato')
 
 ]
 

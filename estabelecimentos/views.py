@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Estabelecimento
-from .forms import EstabelecimentoForm
+from .models import Menu, ItemMenu
+#from .forms import EstabelecimentoForm
 
 
 def index(request):
@@ -13,14 +14,18 @@ def home(request):
     return render(request,'base.html')
 
 
-def configuracoes(request):
-    
-    return render(request, 'configuracao.html')
-
-
 def contato(request):
     
     return render(request, 'contato.html')
+
+
+def cardapio(request):
+
+    item_menus = ItemMenu.objects.all()
+
+    cardapio = {'item_menus': item_menus}
+
+    return render(request, 'cardapio.html', cardapio)
 
 
 def lista_estabelecimentos(request):

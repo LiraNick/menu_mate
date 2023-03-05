@@ -54,6 +54,7 @@ class ItemMenu(models.Model):
     item_menu_id = models.AutoField(primary_key=True)
     item_menu_nome = models.CharField(max_length=100)
     item_menu_preco = models.DecimalField(max_digits=10, decimal_places=2)
+    item_menu_categoria = models.CharField(max_length=100)
     menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
 
     class Meta:

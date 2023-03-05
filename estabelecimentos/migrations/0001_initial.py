@@ -88,6 +88,7 @@ class Migration(migrations.Migration):
                 ('item_menu_id', models.AutoField(primary_key=True, serialize=False)),
                 ('item_menu_nome', models.CharField(max_length=100)),
                 ('item_menu_preco', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('item_menu_categoria', models.CharField(max_length=100)),
                 ('menu', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='estabelecimentos.menu')),
             ],
             options={

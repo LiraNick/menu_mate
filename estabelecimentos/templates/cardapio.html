@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+        <h2>Cardápiop</h2> <!-- fazer uma view para pegar o nome do cardápio no banco de dados. -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item_menu in item_menus %}
+                <tr>
+                    <td>{{ item_menu.item_menu_nome }}</td>
+                    <td>{{ item_menu.item_menu_preco }}</td>
+                    <td>{{ item_menu.item_menu_categoria }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% endblock %}
