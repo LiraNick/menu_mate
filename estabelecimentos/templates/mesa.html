@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Número da Mesa</th>
+            <th scope="col">Lugares</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ação</th> <!-- coluna adicional para botões -->
+        </tr>
+        </thead>
+        <tbody>
+            {% for lista_mesa in mesas %}
+            <tr>
+                <td></td>
+                <td>{{ lista_mesa.mesa_numero }}</td>
+                <td>{{ lista_mesa.mesa_capacidade }}</td>
+                <td>{{ lista_mesa.mesa_status }}</td>
+                <td>
+                    <button class="add-btn">Adicionar</button> <!-- botão Adicionar -->
+                    <button class="edit-btn">Editar</button> <!-- botão Editar -->
+                    <button class="remove-btn">Remover</button> <!-- botão Remover -->
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

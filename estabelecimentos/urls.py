@@ -7,7 +7,11 @@ urlpatterns = [
     path('', views.index, name = 'index'),
     path('home', views.index, name = 'home'),
     path('cardapio', views.cardapio, name = 'cardapio'),
-    path('contato', views.contato, name = 'contato')
+    path('contato', views.contato, name = 'contato'),
+    path('listar_estabelecimento', views.listar_estabelecimento, name = 'listar_estabelecimento'),
+    path('listar_mesa', views.listar_mesa, name = 'listar_mesa'),
+    path('listar_garcom', views.listar_garcom, name = 'listar_garcom'),
+    path('listar_cardapio', views.listar_cardapio, name = 'listar_cardapio')
 
 ]
 

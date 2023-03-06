@@ -28,10 +28,10 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Configurações</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="url 'Estabelecimento' ">Estabelecimento</a>
-					<a class="dropdown-item" href="url 'Mesas' ">Mesas</a>
-					<a class="dropdown-item" href="url 'Garçons' ">Garçons</a>
-					<a class="dropdown-item" href="url 'Cardapio' ">Cardápio</a>
+					<a class="dropdown-item" href="{% url 'listar_estabelecimento' %}">Estabelecimento</a>
+					<a class="dropdown-item" href="{% url 'listar_mesa' %}">Mesas</a>
+					<a class="dropdown-item" href="{% url 'listar_garcom' %}">Garçons</a>
+					<a class="dropdown-item" href="{% url 'listar_cardapio' %}">Cardápio</a>
 				<div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="#">Logout</a>
 				</div>

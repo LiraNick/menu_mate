@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+        <!-- Nome do menu -->
+        {% for menu in menus %}
+            <h3>{{ menu.menu_nome }}</h3>
+        {% endfor %}
+
+        <!-- Laço for para as categoria do menu -->
+        <h4>Lanche</h4>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Ação</th> <!-- coluna adicional para botões -->
+              </tr>
+            </thead>
+            <tbody>
+                {% for item_menu in item_menus_lanche %}
+                <tr>
+                    <td>{{ item_menu.item_menu_id }}</td>
+                    <td>{{ item_menu.item_menu_nome }}</td>
+                    <td>R${{ item_menu.item_menu_preco }}</td>
+                    <td>{{ item_menu.item_menu_categoria }}</td>
+                    <td>
+                        <button class="add-btn" data-item="{{ item_menu.item_menu_id }}">Adicionar</button> <!-- botão Adicionar -->
+                        <span class="item-count" data-item="{{ item_menu.item_menu_id }}">0</span><!-- itens adicionados ao carrinho -->
+                        <button class="remove-btn" data-item="{{ item_menu.item_menu_id }}">Remover</button> <!-- botão Remover -->
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h4>Bebida</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Ação</th> <!-- coluna adicional para botões -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for item_menu in item_menus_bebidas %}
+                <tr>
+                    <td>{{ item_menu.item_menu_id }}</td>
+                    <td>{{ item_menu.item_menu_nome }}</td>
+                    <td>R${{ item_menu.item_menu_preco }}</td>
+                    <td>{{ item_menu.item_menu_categoria }}</td>
+                    <td>
+                        <button class="add-btn" data-item="{{ item_menu.item_menu_id }}">Adicionar</button> <!-- botão Adicionar -->
+                        <span class="item-count" data-item="{{ item_menu.item_menu_id }}">0</span><!-- itens adicionados ao carrinho -->
+                        <button class="remove-btn" data-item="{{ item_menu.item_menu_id }}">Remover</button> <!-- botão Remover -->
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h4>Pastel</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Ação</th> <!-- coluna adicional para botões -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for item_menu in item_menus_pastel %}
+                <tr>
+                    <td>{{ item_menu.item_menu_id }}</td>
+                    <td>{{ item_menu.item_menu_nome }}</td>
+                    <td>R${{ item_menu.item_menu_preco }}</td>
+                    <td>{{ item_menu.item_menu_categoria }}</td>
+                    <td>
+                        <button class="add-btn" data-item="{{ item_menu.item_menu_id }}">Adicionar</button> <!-- botão Adicionar -->
+                        <span class="item-count" data-item="{{ item_menu.item_menu_id }}">0</span><!-- itens adicionados ao carrinho -->
+                        <button class="remove-btn" data-item="{{ item_menu.item_menu_id }}">Remover</button> <!-- botão Remover -->
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+            <script>
+                const addButtons = document.querySelectorAll('.add-btn');
+                const removeButtons = document.querySelectorAll('.remove-btn');
+                const itemCount = document.querySelector('.item-count'); // elemento que exibe a quantidade de itens
+                let cart = []; // Array para armazenar os itens adicionados ao carrinho
+
+                // Evento de clique no botão "Adicionar"
+                addButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        let itemId = button.getAttribute('data-item');
+                        let item = {
+                            id: itemId,
+                            quantity: 1
+                        };
+
+                        let existingItem = cart.find(i => i.id === itemId);
+                        if (existingItem) {
+                            existingItem.quantity++;
+                        } else {
+                            cart.push(item);
+                        }
+
+                        let count = cart.reduce((total, item) => total + item.quantity, 0);
+                        itemCount.textContent = count;
+                    });
+                });
+
+                // Evento de clique no botão "Remover"
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        let itemId = button.getAttribute('data-item');
+                        let existingItem = cart.find(i => i.id === itemId);
+                        if (existingItem) {
+                            existingItem.quantity--;
+                            if (existingItem.quantity === 0) {
+                                cart = cart.filter(i => i.id !== itemId);
+                            }
+                        }
+
+                        let count = cart.reduce((total, item) => total + item.quantity, 0);
+                        itemCount.textContent = count;
+                    });
+                });
+
+            </script>
+
+    {% endblock %}

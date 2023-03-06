@@ -1,9 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Estabelecimento
+from .models import Mesa
+from .models import Garcom
 from .models import Menu, ItemMenu
-#from .forms import EstabelecimentoForm
+from .forms import EstabelecimentoForm
 
 
+#-- -----------------------------------------------------
+#-- Nav Menu
+#-- -----------------------------------------------------
 def index(request):
 
     return render(request,'base.html')
@@ -15,15 +20,69 @@ def home(request):
 
 
 def contato(request):
-    
+
     return render(request, 'contato.html')
 
 
-def cardapio(request):
-    # Recupera todos os objetos Menu do banco de dados onde o menu_id é 1.
-    menus = Menu.objects.filter(menu_id = 1)
+#-- -----------------------------------------------------
+#-- Estabelecimento
+#-- -----------------------------------------------------
+def listar_estabelecimento(request):
+    # Recupera todo o objeto Menu do banco de dados onde o menu_id é 1.
+    estabelecimentos = Estabelecimento.objects.filter(estabelecimento_id = 1)
+    # 'Chave' : Valor, no HTML usar o nome da chave para o laço FOR
+    lista_est = {'estabelecimentos': estabelecimentos}
+
+    return render(request, 'estabelecimento.html', lista_est)
+
+
+#def estabelecimento_form(request):
+#    form = Estabelecimento()
+#    return render(request, 'estabelecimento_form.html', {'form': form})
+
+
+def estabelecimento(request):
+    if request.method == 'POST':
+        form = EstabelecimentoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('estabelecimento')
+    else:
+        form = EstabelecimentoForm()
+    return render(request, 'estabelecimento.html', {'form': form})
+
+
+#-- -----------------------------------------------------
+#-- Mesa
+#-- -----------------------------------------------------
+def listar_mesa(request):
     # Recupera todos os objetos Menu do banco de dados.
-    #item_menus = ItemMenu.objects.all()
+    mesas = Mesa.objects.all()
+
+    lista_de_mesa = {'mesas': mesas}
+
+    return render(request,'mesa.html', lista_de_mesa)
+
+
+#-- -----------------------------------------------------
+#-- Garçom
+#-- -----------------------------------------------------
+def listar_garcom(request):
+    # Recupera todos os objetos Menu do banco de dados.
+    garcons = Garcom.objects.all()
+
+    lista_de_garcom = {'garcons': garcons}
+
+    return render(request,'garcom.html', lista_de_garcom)
+
+
+
+#-- -----------------------------------------------------
+#-- Cardápio
+#-- -----------------------------------------------------
+def cardapio(request):
+    # Recupera todo o objeto Menu do banco de dados onde o menu_id é 1.
+    menus = Menu.objects.filter(menu_id = 1)
     # Recupera todos os objetos ItemMenu do banco de dados que pertencem à categoria especificada
     item_menus_lanche = ItemMenu.objects.filter(item_menu_categoria = 'Lanche')
     item_menus_bebidas = ItemMenu.objects.filter(item_menu_categoria = 'Bebida')
@@ -37,23 +96,25 @@ def cardapio(request):
         'item_menus_pastel': item_menus_pastel
     }
 
+    return render(request, 'cardapio_home.html', context)
+
+
+def listar_cardapio(request):
+    # Recupera todos os objetos Menu do banco de dados.
+    garcons = Garcom.objects.all()
+
+    item_menus_lanche = ItemMenu.objects.filter(item_menu_categoria = 'Lanche')
+    item_menus_bebidas = ItemMenu.objects.filter(item_menu_categoria = 'Bebida')
+    item_menus_pastel = ItemMenu.objects.filter(item_menu_categoria = 'Pastel')
+
+    # Dicionário contento as variávies.
+    context = {
+        'item_menus_lanche': item_menus_lanche,
+        'item_menus_bebidas': item_menus_bebidas,
+        'item_menus_pastel': item_menus_pastel
+    }
+
     return render(request, 'cardapio.html', context)
-
-
-def lista_estabelecimentos(request):
-    estabelecimentos = Estabelecimento.objects.all()
-
-    dados = {'estabelecimentos': estabelecimentos}
-
-    return render(request, 'estabelecimento.html', dados)
-
-
-def editar_estabelecimento(request, estabelecimento_id):
-    estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
-
-    exibir = {'estabelecimento': estabelecimentos}
-
-    return render(request, 'editar_estabelecimento.html', exibir)
 
 
 """
@@ -62,11 +123,4 @@ def editar_estabelecimento(request, estabelecimento_id):
         form.save()
         return redirect('lista_estabelecimentos')
     return render(request, 'editar_estabelecimento.html', {'form': form})
-
-def aluno(request, aluno_id):
-    alunos = get_object_or_404(Alunos, pk = aluno_id)
-
-    aluno_a_exibir = {'aluno': alunos}
-
-    return render(request,'aluno.html', aluno_a_exibir)
 """

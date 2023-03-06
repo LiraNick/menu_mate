@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <form>
+        {% for lista_mesa in mesas %}
+        <div class="form-group col-md-2">
+            <label for="mesa_numero">Número da Mesa</label>
+            <input type="text" class="form-control" id="mesa_numero" placeholder="Número" value="{{ lista_mesa.mesa_numero }}">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="mesa_capacidade">Lugares</label>
+            <input type="text" class="form-control" id="mesa_capacidade" placeholder="Capacidade" value="{{ lista_mesa.mesa_capacidade }}">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="mesa_status">Status da Mesa</label>
+            <input type="text" class="form-control" id="mesa_status" placeholder="Status" value="{{ lista_mesa.mesa_status }}">
+        </div>
+        {% endfor %}        
+    </form>
+
+{% endblock %}
