@@ -21,7 +21,7 @@ main {
     display:flex;
 }
 
-#description-title{
+#description-title-table{
     margin-left:3vw;
     padding-left:1.5vw;
     padding-right:1.5vw;
@@ -33,7 +33,7 @@ main {
 
 .main-page {
     width:100vw;
-    height:82vh;
+    min-height:82vh;
     display:flex;
     flex-direction:row;
 }
@@ -57,7 +57,7 @@ main {
 
 .aside-table{
     width:25vw;
-    margin-bottom:10vh;
+    margin-bottom:2vh;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -68,14 +68,23 @@ main {
 .aside-page {
     display:flex;
     flex-direction:column;
-    align-items:center;
     width:25vw;
+    min-height:82vh;
     background-color:rgba(238,238,238);
+}
+
+#add-title{
+    margin-bottom:5vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .aside-add{
     display:flex;
     flex-direction:column;
+    margin-left:1vw;
+    max-height:15vh;
 }
 
 #attendant{
@@ -97,10 +106,57 @@ main {
 .aside-pesquisar{
     display:flex;
     flex-direction:row;
+    margin-bottom:2vh;
 }
 
 .aside-quantidade{
+    margin-top:2vh;
     display:flex;
     flex-direction:row;
+    margin-left:1vw;
 }
 
+#search-info {
+    margin-right:0.5vw;
+}
+
+#quantity-info{
+    margin-right:0.5vw;
+}
+
+#quantity-bar{
+    margin-right:0.3vw;
+}
+
+#select-item{
+    margin-left:1vw;
+    margin-right:1vw;
+}
+
+#description-title-products{
+    margin-left:3vw;
+    padding-left:1.5vw;
+    padding-right:1.5vw;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(238,238,238);
+}
+
+#list-products{
+    margin-top:3vh;
+}
+
+.select-product{
+    margin-left:1vw;
+    margin-right:1vw;
+    margin-top:1vh;
+    font-size:1.5rem;
+    text-decoration:none;
+    color:black;
+}
+
+.select-product:hover{
+    background-color:black;
+    color:white;
+}

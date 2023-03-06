@@ -10,99 +10,134 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
 
-    <link rel="stylesheet" href="css/produtos.css">
-
-
+    <link rel="stylesheet" href="static.css">
     <title>PRODUTOS</title>
 </head>
 
 <body>
     <!-- CABEÇALHO -->
-    <nav>
-        <div class="topo">
-            <div class="row">
-                <div class="logo col-1"><img src="img/logo.png" alt=""></div>
-                <div class="menu col">
-                    <div class="row">
-                        <div class="col-1 icone_menu"><img src="img/ico/restaurante.png" alt="Restaurante"></div>
-                        <div class="col-1 icone_menu"><img src="img/ico/vendas.png" alt="Vendas"></div>
-                        <div class="col-1 icone_menu"><img src="img/ico/despesas.png" alt="despesas"></div>
-                        <div class="col-1 icone_menu  bg-danger"><img src="img/ico/produtos.png" alt="produtos"></div>
-                        <div class="col-1 icone_menu"><img src="img/ico/clientes.png" alt="clientes"></div>
-                        <div class="col-1 icone_menu"><img src="img/ico/fornecedores.png" alt="fornecedores"></div>
-                        <div class="col-1 icone_menu"><img src="img/ico/relatorios.png" alt="relatorios"></div>
-                    </div>
-                </div>
-                <div class="bt_login col-2"><img src="img/ico/login.png" alt="login"></div>
-            </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Principal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Despesas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vendas</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
     <!-- FIM CABEÇALHO -->
 
     <!-- CORPO -->
-    <div class="fundo_topo">
-        <div class="topo_conteudo col">PRODUTOS</div>
-    </div>
 
+    <main>
+      <div class="description">
+        <span id="description-title-products">PRODUTOS</span>
+      </div>
+      <div class="main-page">
 
-    <div class="main">
-        <div class="container-fluid">
+        <aside class="aside-page">
+            <div id="list-products" class="list-group">
+                <a href="#" class="select-product">Bebidas</a>
+                <a href="#" class="select-product ">Cafeteria</a>
+                <a href="#" class="select-product ">Pratos Principais</a>
+                <a href="#" class="select-product ">Sobremesas</a>
+              </div>
+      
+        </aside>  
+
+        <div class="container mt-5">
             <div class="row">
-                <div class="filtro_produtos">
-                    <a href=""><div class="link_produto">Bebidas</div></a>
-                    <div class="link_produto"><a href="">Cafeteria</a></div>
-                    <div class="link_produto"><a href="">Pratos Principais</a></div>
-                    <div class="link_produto"><a href="">Sobremesas</a></div>
-                </div>
-                <div class="conteudo col">
-                    <div class="topo_pesquisa">
-                        <div class="row">
-                            <div class="buscar col"><h6>Buscar em todas as categorias: <input type="text"></h6></div>
-                            <div class="novo_produto col">
-                                <h5>+ Novo Produto</h5> 
-                            </div>
-                        </div>
 
-
-                        <div class="resultado_pesquisa">
-                            <div class="row">
-                                <div class="col"><h5>Código</h5></div>
-                                <div class="col"><h5>Produto</h5></div>
-                                <div class="col"><h5>Custo</h5></div>
-                                <div class="col"><h5>Margem</h5></div>
-                                <div class="col"><h5>Preço</h5></div>
-                            </div>
-                        </div>
-    
-                        <div class="resultado_pesquisa">
-                            <div class="row">
-                                <div class="col"><h6>10</h6></div>
-                                <div class="col"><h6>Suco</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 20,0</h6></div>
-                            </div>
-                            <div class="row">
-                                <div class="col"><h6>11</h6></div>
-                                <div class="col"><h6>Água</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 10,0</h6></div>
-                            </div>
-                            <div class="row">
-                                <div class="col"><h6>12</h6></div>
-                                <div class="col"><h6>Fritas</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 0</h6></div>
-                                <div class="col"><h6>R$ 40,0</h6></div>
-                            </div>
-                        </div>
+                <div class="col-md-8">
+                  <!-- Product Table -->
+                  <h3>Product List</h3>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for product">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button">Search</button>
                     </div>
+                  </div>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Cost</th>
+                        <th>Price</th>
+                        <th>Margin</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Product 1</td>
+                        <td>$5</td>
+                        <td>$10</td>
+                        <td>50%</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Product 2</td>
+                        <td>$10</td>
+                        <td>$20</td>
+                        <td>50%</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Product 3</td>
+                        <td>$15</td>
+                        <td>$30</td>
+                        <td>50%</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <div class="col-md-4 mb-3">
+                    <!-- Add Product Form -->
+                    <h3>Add New Product</h3>
+                    <form>
+                      <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input type="text" class="form-control" id="id" placeholder="Enter product ID">
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter product name">
+                      </div>
+                      <div class="form-group">
+                        <label for="cost">Cost:</label>
+                        <input type="number" class="form-control" id="cost" placeholder="Enter product cost">
+                      </div>
+                      <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" id="price" placeholder="Enter product price">
+                      </div>
+                      <div class="form-group">
+                        <label for="margin">Margin:</label>
+                        <input type="number" class="form-control" id="margin" placeholder="Enter product margin">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add Product</button>
+                    </form>
+                  </div>
             </div>
-        </div>
-    </div>
+          </div>
+        
 
+      </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
