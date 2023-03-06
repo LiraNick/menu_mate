@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome do Estabelecimento</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Ação</th> <!-- coluna adicional para botões -->
+        </tr>
+        </thead>
+        <tbody>
+            {% for lista in estabelecimentos %}
+            <tr>
+                <td></td>
+                <td>{{ lista.estabelecimento_nome }}</td>
+                <td>{{ lista.estabelecimento_endereco }}</td>
+                <td>{{ lista.estabelecimento_telefone }}</td>
+                <td>
+                    <button class="add-btn">Adicionar</button> <!-- botão Adicionar -->
+                    <button class="edit-btn">Editar</button> <!-- botão Editar -->
+                    <button class="remove-btn">Remover</button> <!-- botão Remover -->
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <form>
+        {% for listar in estabelecimentos %}
+        <div class="form-group col-md-4">
+            <label for="est_nome">Nome do Estabelecimento</label>
+            <input type="text" class="form-control" id="est_nome" placeholder="Nome" value="{{ listar.estabelecimento_nome }}">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="est_endereco">Endereço do Estabelecimento</label>
+            <input type="text" class="form-control" id="est_nome" placeholder="Endereço" value="{{ listar.estabelecimento_endereco }}">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="est_telefone">Telefone do Estabelecimento</label>
+            <input type="text" class="form-control" id="est_nome" placeholder="Telefone" value="{{ listar.estabelecimento_telefone }}">
+        </div>
+        {% endfor %}        
+    </form>
+
+{% endblock %}
