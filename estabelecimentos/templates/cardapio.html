@@ -1,25 +1,72 @@
 {% extends "base.html" %}
 
     {% block conteudo %}
+        <!-- Nome do menu -->
+        {% for menu in menus %}
+            <h3>{{ menu.menu_nome }}</h3>
+        {% endfor %}
 
-        <h2>Cardápiop</h2> <!-- fazer uma view para pegar o nome do cardápio no banco de dados. -->
-        <table>
+        <!-- Laço for para as categoria do menu -->
+        <h4>Lanche</h4>
+        <table class="table table-hover">
             <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>Categoria</th>
-                </tr>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+              </tr>
             </thead>
             <tbody>
-                {% for item_menu in item_menus %}
+                {% for item_menu in item_menus_lanche %}
                 <tr>
                     <td>{{ item_menu.item_menu_nome }}</td>
-                    <td>{{ item_menu.item_menu_preco }}</td>
+                    <td>R${{ item_menu.item_menu_preco }}</td>
                     <td>{{ item_menu.item_menu_categoria }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
-        </table>
+          </table>
+
+          <h4>Bebida</h4>
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Preço</th>
+                  <th scope="col">Categoria</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% for item_menu in item_menus_bebidas %}
+                  <tr>
+                      <td>{{ item_menu.item_menu_nome }}</td>
+                      <td>R${{ item_menu.item_menu_preco }}</td>
+                      <td>{{ item_menu.item_menu_categoria }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+
+            <h4>Pastel</h4>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for item_menu in item_menus_pastel %}
+                    <tr>
+                        <td>{{ item_menu.item_menu_nome }}</td>
+                        <td>R${{ item_menu.item_menu_preco }}</td>
+                        <td>{{ item_menu.item_menu_categoria }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
 
     {% endblock %}
+
+
