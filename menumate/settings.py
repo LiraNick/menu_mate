@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'menumate',
-        'PASSWORD': '654321',
-        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': 'da22i9d4sim119post',
+        'HOST': '192.168.252.210',
         'PORT': '5432',
     }
 }
