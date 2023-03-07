@@ -160,3 +160,10 @@ main {
     background-color:black;
     color:white;
 }
+
+#sells-filter{
+    display:flex;
+    justify-content:center;
+    margin-top:3vh;
+    margin-bottom:2vh;
+}

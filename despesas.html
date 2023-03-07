@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
 
     <link rel="stylesheet" href="static.css">
-    <title>PRINCIPAL</title>
+    <title>DESPESAS</title>
 </head>
 
 <body>
@@ -42,85 +42,70 @@
 
     <!-- CORPO -->
 
-    <main>
-      <div class="description">
-        <span id="description-title">MESAS</span>
+    <div class="description">
+        <span id="description-title-table">RELATÓRIO DE VENDAS</span>
       </div>
-      <div class="main-page">
-        <div class="tables col-9">
-          <div class="mesa">01</div>
-          <div class="mesa">02</div>
-          <div class="mesa">03</div>
-          <div class="mesa">04</div>
-          <div class="mesa">05</div>
-          <div class="mesa">06</div>
-          <div class="mesa">07</div>
-          <div class="mesa">08</div>
-          <div class="mesa">09</div>
-          <div class="mesa">10</div>
+
+
+    <div id="sells-filter" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Daily
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Monthly
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Yearly
+              </label>
+            </div>
+          </div>
         </div>
-        <aside class="aside-page">
-
-          <div class="aside-table">
-            <h4>Mesa</h4>
-            <div class="aside-atendente">
-              <h6 id="attendant">Atendente</h6>
-              <select id="attendant-select"></select>
-            </div>
-          </div>
-
-          <div class="aside-add">
-            <h4 >Adicionar</h4>
-            <div class="aside-pesquisar">
-              <h6>Pesquisar:</h6>
-              <input type="text">
-            </div>
-            <div class="aside-quantidade">
-              <h6>Quantidade:</h6>
-              <input id="quantity-text" type="number" style="width:3vw;">
-              <button>Enviar</button>
-            </div>
-          </div>
-          
-        </aside>  
       </div>
-    </main>
 
-    <!-- <div class="fundo_topo">
-        <div class="topo_conteudo col">MESAS</div>
-    </div> -->
-
-    <!-- <div class="main">
-        <div class="container-fluid">
+    <main>          
+          <div class="container-fluid">
             <div class="row">
-                <div class="conteudo col-9">
-                    <div class="mesa">01</div>
-                    <div class="mesa">02</div>
-                    <div class="mesa">03</div>
-                    <div class="mesa">04</div>
-                    <div class="mesa">05</div>
-                    <div class="mesa">06</div>
-                    <div class="mesa">07</div>
-                    <div class="mesa">08</div>
-                    <div class="mesa">09</div>
-                    <div class="mesa">10</div>
-                </div>
-                <div class="info_mesa col">
-                    <h4>Mesa 01</h4>
-                    <h6>Atendente: <input type="text"></h6>
-                    <hr>
-                    <h4>Adicionar</h4>
-                    <h6>Pesquisar: <input type="search"></h6>
-                    <h6>Água <input type="checkbox">
-                        | Café <input type="checkbox">
-                        | Suco <input type="checkbox">
-                    </h6>
-                    <h6>Qauantidade: <input type="number" style="width: 50px"> <input type="submit"></h6>
-                </div>
+              <div class="col-md-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Valor</th>
+                      <th scope="col">Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Electricity Bill</td>
+                        <td>$100</td>
+                        <td>2022-03-01</td>
+                        <td>
+                          <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                          <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Water Bill</td>
+                        <td>$50</td>
+                        <td>2022-03-03</td>
+                        <td>
+                          <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                          <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </div>
-    </div> -->
+          </div>
 
+        </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
