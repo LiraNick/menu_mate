@@ -1,125 +1,129 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
 
-    <link rel="stylesheet" href="style.css">
-    <title>PRINCIPAL</title>
-</head>
+      <!-- Stylesheet -->
+      <link rel="stylesheet" href="{% static 'style.css' %}">
 
-<body>
-    <!-- CABEÇALHO -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Website</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Principal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Despesas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Vendas</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    <!-- FIM CABEÇALHO -->
+      <!-- Título -->
+      <title>PRINCIPAL</title>
+  </head>
 
-    <!-- CORPO -->
-
-    <main>
-      <div class="description">
-        <span id="description-title-table">MESAS</span>
-      </div>
-      <div class="main-page">
-        <div class="tables col-9">
-          <div class="mesa">01</div>
-          <div class="mesa">02</div>
-          <div class="mesa">03</div>
-          <div class="mesa">04</div>
-          <div class="mesa">05</div>
-          <div class="mesa">06</div>
-          <div class="mesa">07</div>
-          <div class="mesa">08</div>
-          <div class="mesa">09</div>
-          <div class="mesa">10</div>
-        </div>
-        <aside class="aside-page">
-
-          <div class="aside-table">
-            <h4>Mesa</h4>
-            <div class="aside-atendente">
-              <h6 id="attendant">Atendente</h6>
-              <select id="attendant-select"></select>
-            </div>
+  <body>
+      <!-- CABEÇALHO -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">My Website</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Principal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Despesas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vendas</a>
+              </li>
+            </ul>
           </div>
+        </nav>
+      <!-- FIM CABEÇALHO -->
 
+      <!-- CORPO -->
 
-
-          <div class="aside-add col">
-            <h4 id="add-title">Adicionar</h4>
-            <div class="aside-pesquisar">
-              <h6 id="search-info">Pesquisar:</h6>
-              <input id="search-bar" type="text">
-            </div>
+      <main>
+        <div class="description">
+          <span id="description-title-table">MESAS</span>
+        </div>
+        <div class="main-page">
+          <div class="tables col-9">
+            <div class="mesa">01</div>
+            <div class="mesa">02</div>
+            <div class="mesa">03</div>
+            <div class="mesa">04</div>
+            <div class="mesa">05</div>
+            <div class="mesa">06</div>
+            <div class="mesa">07</div>
+            <div class="mesa">08</div>
+            <div class="mesa">09</div>
+            <div class="mesa">10</div>
           </div>
-          <div id="select-item" class="wrapper">
-            <select size="5" name="" id="" class="form-control">
-                    <option value="">Café</option>
-                    <option value="">Água</option>
-                    <option value="">Pizza</option>
-                    <option value="">Chisburguer</option>
-                    <option value="">MCDonalds</option>
-                    <option value="">BigMek</option>
-                    <option value="">Coquinha 0</option>
-                    <option value="">Pepsicola</option>
-                    <option value="">Redbull</option>
-                    <option value="">Garaná</option>
-                </select></div>
+          <aside class="aside-page">
+
+            <div class="aside-table">
+              <h4>Mesa</h4>
+              <div class="aside-atendente">
+                <h6 id="attendant">Atendente</h6>
+                <select id="attendant-select"></select>
+              </div>
+            </div>
+
+
+
+            <div class="aside-add col">
+              <h4 id="add-title">Adicionar</h4>
+              <div class="aside-pesquisar">
+                <h6 id="search-info">Pesquisar:</h6>
+                <input id="search-bar" type="text">
+              </div>
+            </div>
+            <div id="select-item" class="wrapper">
+              <select size="5" name="" id="" class="form-control">
+                      <option value="">Café</option>
+                      <option value="">Água</option>
+                      <option value="">Pizza</option>
+                      <option value="">Chisburguer</option>
+                      <option value="">MCDonalds</option>
+                      <option value="">BigMek</option>
+                      <option value="">Coquinha 0</option>
+                      <option value="">Pepsicola</option>
+                      <option value="">Redbull</option>
+                      <option value="">Garaná</option>
+                  </select></div>
+              
+
+              <div class="aside-quantidade">
+                <h6 id="quantity-info" >Quantidade:</h6>
+                <input id="quantity-bar" type="number" style="width:3vw;">
+                <button id="submit-button" >Enviar</button>
+              </div>
+
+            <!-- <div class="aside-add col">
+              <h4>Mesa 01</h4>
+              <h6>Atendente: <input type="text"></h6>
+              <hr>
+              <h4>Adicionar</h4>
+              <h6>Pesquisar: <input type="search"></h6>
+              <h6>Água <input type="checkbox">
+                  | Café <input type="checkbox">
+                  | Suco <input type="checkbox">
+              </h6>
+              <h6>Qauantidade: <input type="number" style="width: 50px"> <input type="submit"></h6>
+          </div> -->
+
             
+          </aside>  
+        </div>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"></script>
 
-            <div class="aside-quantidade">
-              <h6 id="quantity-info" >Quantidade:</h6>
-              <input id="quantity-bar" type="number" style="width:3vw;">
-              <button id="submit-button" >Enviar</button>
-            </div>
-
-          <!-- <div class="aside-add col">
-            <h4>Mesa 01</h4>
-            <h6>Atendente: <input type="text"></h6>
-            <hr>
-            <h4>Adicionar</h4>
-            <h6>Pesquisar: <input type="search"></h6>
-            <h6>Água <input type="checkbox">
-                | Café <input type="checkbox">
-                | Suco <input type="checkbox">
-            </h6>
-            <h6>Qauantidade: <input type="number" style="width: 50px"> <input type="submit"></h6>
-        </div> -->
-
-          
-        </aside>  
-      </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-
-</body>
+  </body>
 
 </html>
