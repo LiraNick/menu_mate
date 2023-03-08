@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuMate - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<!--Inicio Topo-->
+    <header>
+        <h2 class="logo"><img src="img/logo_small.png" alt="Logo Menu Mate"></h2>
+        <nav class="menu_navigation">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!--Inicio FORM login-->
+    <div class="wrapper">
+        <span class="icon-close">
+            <i class="fa fa-times" ></i>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Manter logado</label>
+                    <a href="#">Esqueci a senha!</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Não tem conta no sistema? <a href="#" class="register-link">Registre-se</a></p>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="form-box register">
+            <h2>Registro</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" required>
+                    <label>Usuário</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Aceito os termos de uso.</label>
+                </div>
+                <button type="submit" class="btn">Registro</button>
+                <div class="login-register">
+                    <p>Já possuo conta? <a href="#" class="login-link">Fazer Login</a></p>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/523640fc82.js" crossorigin="anonymous"></script>
+</body>
+</html>
