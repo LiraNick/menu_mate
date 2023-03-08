@@ -7,6 +7,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+      <!-- Stylesheet Bootstrap-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
       <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
@@ -19,7 +20,7 @@
   </head>
 
   <body>
-      <!-- CABEÇALHO -->
+      <!-- Cabeçalho -->
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
           <a class="navbar-brand" href="#">My Website</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,38 +42,47 @@
               </li>
             </ul>
           </div>
-        </nav>
-      <!-- FIM CABEÇALHO -->
+      </nav>
+      <!-- Fim do cabeçalho -->
 
-      <!-- CORPO -->
-
+      <!-- Corpo -->
       <main>
+
         <div class="description">
-          <span id="description-title-table">MESAS</span>
+          <span class="description-title-table">MESAS</span>
         </div>
+
         <div class="main-page">
           <div class="tables col-9">
-            
-              <!-- EXIBINDO AS MESAS -->
+              <!-- Exibindo Mesas -->
               {% for mesa in mesas %}
                   <div class="mesa">
-                      <a href="">
-                          {{ mesa.numero }}
+                      <a href="#" id="{{ mesa.mes_id }}" >
+                          {{ mesa.mes_numero }}
                       </a>
                   </div>
               {% endfor %}
-          </div>
+          </div>    
+
           <aside class="aside-page">
 
             <div class="aside-table">
-              <h4>Mesa</h4>
+              <!-- Tag usada para ver qual mesa esta sem atendida -->
+              <h4 id="id_mesa">Mesa</h4>
               <div class="aside-atendente">
-                <h6 id="attendant">Atendente</h6>
-                <select id="attendant-select"></select>
+                <!-- Adicionar item a comanda -->
+                <form action="/action_page.php">
+                  <label for="cars">Atendente</label>
+                  <select name="atendente">
+                    {% for garcon in garcons %}
+                        <option value="{{ garcon }}">{{ garcon.gar_nome }}</option>
+                    {% endfor %}
+                  </select>                
+                  <br><br>
+                </form>
+                <!-- Fim do adicionar item a comanda -->
               </div>
             </div>
-
-
 
             <div class="aside-add col">
               <h4 id="add-title">Adicionar</h4>
@@ -81,47 +91,39 @@
                 <input id="search-bar" type="text">
               </div>
             </div>
+
             <div id="select-item" class="wrapper">
+              <!-- Adicionar item a comanda -->
               <select size="5" name="" id="" class="form-control">
-                      <option value="">Café</option>
-                      <option value="">Água</option>
-                      <option value="">Pizza</option>
-                      <option value="">Chisburguer</option>
-                      <option value="">MCDonalds</option>
-                      <option value="">BigMek</option>
-                      <option value="">Coquinha 0</option>
-                      <option value="">Pepsicola</option>
-                      <option value="">Redbull</option>
-                      <option value="">Garaná</option>
-                  </select></div>
-              
+                  {% for itens in itens_de_cardapio %}
+                      <option value="{{ itens.car_id }}">{{ itens.car_item }}</option>
+                  {% endfor %}
+              </select></div>
+              <!-- Fim do adicionar item a comanda -->
 
               <div class="aside-quantidade">
                 <h6 id="quantity-info" >Quantidade:</h6>
                 <input id="quantity-bar" type="number" style="width:3vw;">
                 <button id="submit-button" >Enviar</button>
               </div>
+            </div>
 
-            <!-- <div class="aside-add col">
-              <h4>Mesa 01</h4>
-              <h6>Atendente: <input type="text"></h6>
-              <hr>
-              <h4>Adicionar</h4>
-              <h6>Pesquisar: <input type="search"></h6>
-              <h6>Água <input type="checkbox">
-                  | Café <input type="checkbox">
-                  | Suco <input type="checkbox">
-              </h6>
-              <h6>Qauantidade: <input type="number" style="width: 50px"> <input type="submit"></h6>
-          </div> -->
+          </aside>
 
-            
-          </aside>  
         </div>
+
       </main>
+      <!-- Fim do corpo-->
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-          crossorigin="anonymous"></script>
+          crossorigin="anonymous">
+      </script>
+      <script>
+        document.getElementById("{{ mesa.mes_id }}").addEventListener("click", function() {
+          document.getElementById("id_mesa").innerHTML = "Este é o novo h4";
+        });
+      </script>
 
   </body>
 

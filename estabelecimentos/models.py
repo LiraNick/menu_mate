@@ -95,7 +95,7 @@ class Cardapio(models.Model):
     cat_id = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     class Meta:
-        db_table = "menu"
+        db_table = "cardapio"
 
 
 """
