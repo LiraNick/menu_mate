@@ -45,8 +45,7 @@ CREATE TABLE "Mesas"(
     "mes_id" BIGINT NOT NULL,
     "mes_numero" BIGINT NOT NULL,
     "mes_capacidade" BIGINT NOT NULL,
-    "mes_status" VARCHAR(255) NOT NULL,
-    "gar_id" BIGINT NOT NULL
+    "mes_status" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "Mesas" ADD PRIMARY KEY("mes_id");
@@ -56,7 +55,6 @@ class Mesa(models.Model):
     mes_numero = models.IntegerField()
     mes_capacidade = models.IntegerField()
     mes_status = models.CharField(max_length=10)
-    gar_id = models.ForeignKey(Garcom, on_delete=models.CASCADE)
 
     class Meta:
         db_table = "mesa"
@@ -105,8 +103,9 @@ CREATE TABLE "Comanda"(
     "com_id" BIGINT NOT NULL,
     "usu_id" BIGINT NOT NULL,
     "mes_id" BIGINT NOT NULL,
+    "gar_id" BIGINT NOT NULL,
     "car_id" BIGINT NOT NULL,
-    "cam_data" DATE NOT NULL
+    "car_data" DATE NOT NULL
 );
 ALTER TABLE
     "Comanda" ADD PRIMARY KEY("com_id");
@@ -115,8 +114,12 @@ class Comanda(models.Model):
     com_id = models.AutoField(primary_key=True)
     usu_id = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     mes_id = models.ForeignKey(Mesa, on_delete=models.CASCADE)
+    gar_id = models.ForeignKey(Garcom, on_delete=models.CASCADE)
     car_id = models.ForeignKey(Cardapio, on_delete=models.CASCADE)
     com_data = models.DateTimeField()
 
     class Meta:
         db_table = "comanda"
+
+
+

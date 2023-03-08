@@ -52,16 +52,15 @@
         </div>
         <div class="main-page">
           <div class="tables col-9">
-            <div class="mesa">01</div>
-            <div class="mesa">02</div>
-            <div class="mesa">03</div>
-            <div class="mesa">04</div>
-            <div class="mesa">05</div>
-            <div class="mesa">06</div>
-            <div class="mesa">07</div>
-            <div class="mesa">08</div>
-            <div class="mesa">09</div>
-            <div class="mesa">10</div>
+            
+              <!-- EXIBINDO AS MESAS -->
+              {% for mesa in mesas %}
+                  <div class="mesa">
+                      <a href="">
+                          {{ mesa.numero }}
+                      </a>
+                  </div>
+              {% endfor %}
           </div>
           <aside class="aside-page">
 
