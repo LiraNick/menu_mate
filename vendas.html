@@ -52,26 +52,50 @@
           <div class="col-md-12">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Diário
+                <input type="radio" name="options" id="option1" name="content_type" onclick="changeToDaily()" autocomplete="off" value="daily" checked> Diário
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Mensal
+                <input type="radio" name="options" id="option2" name="content_type" onclick="changeToMonthly()" autocomplete="off" value="monthly"> Mensal
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Anual
+                <input type="radio" name="options" id="option3" name="content_type" onclick="changeToYearly()" autocomplete="off" value="yearly"> Anual
               </label>
             </div>
           </div>
         </div>
       </div>
     
-      <div class="container-fluid">
+      <div id="daily-sells-page" class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">De 03/03/23 00:00 hs até 04/03/23 00:00 hs</th>
+                  <th scope="col">De 07/03/2023 até 08/03/2023</th>
+                  <th scope="col">Mesas</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RESULTADO</td>
+                  <td>20 MESAS</td>
+                  <td>R$ 1.584,55</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:none" id="monthly-sells-page" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">De 08/02/2023 até 08/03/2023</th>
                   <th scope="col">Mesas</th>
                   <th scope="col">Total</th>
                 </tr>
@@ -80,7 +104,7 @@
                 <tr>
                   <td>RESULTADO</td>
                   <td>565 MESAS</td>
-                  <td>R$ 9.896,64</td>
+                  <td>R$ 32.450,27</td>
                 </tr>
 
               </tbody>
@@ -88,7 +112,33 @@
           </div>
         </div>
       </div>
+
+      <div style="display:none" id="yearly-sells-page" class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">De 08/03/2022 até 08/03/2023</th>
+                  <th scope="col">Mesas</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RESULTADO</td>
+                  <td>6698 MESAS</td>
+                  <td>R$ 393.862,02</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
         </main>
+    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
